@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="TiFiles.Cli/TiFiles.Cli.csproj" />
+  <Project Path="TiFiles.Tests/TiFiles.Tests.csproj" />
+  <Project Path="TiFiles/TiFiles.csproj" />
+</Solution>

@@ -1,0 +1,103 @@
+﻿#nullable enable
+const TiFiles.TiFileHeader.HeaderLength = 128 -> int
+const TiFiles.TiFileHeader.SectorLength = 256 -> int
+static TiFiles.TiFileReader.IsTiFile(System.IO.Stream? stream) -> bool
+static TiFiles.TiFileReader.IsTiFileAsync(System.IO.Stream? stream, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<bool>!
+static TiFiles.TiFileReader.Read(string! path) -> TiFiles.ITiFile!
+static TiFiles.TiFileReader.Read(System.IO.Stream! stream) -> TiFiles.ITiFile!
+static TiFiles.TiFileReader.ReadAsync(string! path, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<TiFiles.ITiFile!>!
+static TiFiles.TiFileReader.ReadAsync(System.IO.Stream! stream, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task<TiFiles.ITiFile!>!
+static TiFiles.TiFilesSignature.Signature.get -> System.ReadOnlySpan<byte>
+static TiFiles.TiFileWriter.Write(string? path, TiFiles.ITiFile! file) -> void
+static TiFiles.TiFileWriter.Write(System.IO.Stream? stream, TiFiles.ITiFile? file) -> void
+static TiFiles.TiFileWriter.WriteAsync(string! path, TiFiles.ITiFile! file, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+static TiFiles.TiFileWriter.WriteAsync(System.IO.Stream? stream, TiFiles.ITiFile? file, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
+TiFiles.ITiFile
+TiFiles.ITiFile.Data.get -> System.ReadOnlyMemory<byte>
+TiFiles.ITiFile.Header.get -> TiFiles.ITiFileHeader!
+TiFiles.ITiFile.OriginalHeader.get -> System.ReadOnlyMemory<byte>
+TiFiles.ITiFileHeader
+TiFiles.ITiFileHeader.Created.get -> System.DateTime?
+TiFiles.ITiFileHeader.DataType.get -> string!
+TiFiles.ITiFileHeader.EndOfFileOffset.get -> byte
+TiFiles.ITiFileHeader.EndOfFileOffset.set -> void
+TiFiles.ITiFileHeader.ExtendedHeader.get -> ushort
+TiFiles.ITiFileHeader.FileName.get -> string!
+TiFiles.ITiFileHeader.Flags.get -> TiFiles.TiFileFlags
+TiFiles.ITiFileHeader.Identifier.get -> byte
+TiFiles.ITiFileHeader.IsDisplay.get -> bool
+TiFiles.ITiFileHeader.IsFixed.get -> bool
+TiFiles.ITiFileHeader.IsInternal.get -> bool
+TiFiles.ITiFileHeader.IsModified.get -> bool
+TiFiles.ITiFileHeader.IsProgram.get -> bool
+TiFiles.ITiFileHeader.IsProtected.get -> bool
+TiFiles.ITiFileHeader.IsVariable.get -> bool
+TiFiles.ITiFileHeader.Level3RecordCount.get -> ushort
+TiFiles.ITiFileHeader.Mxt.get -> byte
+TiFiles.ITiFileHeader.Organization.get -> string!
+TiFiles.ITiFileHeader.RecordLength.get -> byte
+TiFiles.ITiFileHeader.RecordsPerSector.get -> byte
+TiFiles.ITiFileHeader.Reserved1B.get -> byte
+TiFiles.ITiFileHeader.TotalSectors.get -> ushort
+TiFiles.ITiFileHeader.TotalSectors.set -> void
+TiFiles.ITiFileHeader.Updated.get -> System.DateTime?
+TiFiles.TiFile
+TiFiles.TiFile.Data.get -> System.ReadOnlyMemory<byte>
+TiFiles.TiFile.Header.get -> TiFiles.ITiFileHeader!
+TiFiles.TiFile.OriginalHeader.get -> System.ReadOnlyMemory<byte>
+TiFiles.TiFile.TiFile(TiFiles.ITiFileHeader? header, System.ReadOnlyMemory<byte> data, System.ReadOnlyMemory<byte> originalHeader = default(System.ReadOnlyMemory<byte>)) -> void
+TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Emulate = 64 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Internal = 2 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Modified = 16 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.None = 0 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Program = 1 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Protected = 8 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Reserved04 = 4 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Reserved20 = 32 -> TiFiles.TiFileFlags
+TiFiles.TiFileFlags.Variable = 128 -> TiFiles.TiFileFlags
+TiFiles.TiFileFormatException
+TiFiles.TiFileFormatException.TiFileFormatException() -> void
+TiFiles.TiFileFormatException.TiFileFormatException(string! message) -> void
+TiFiles.TiFileFormatException.TiFileFormatException(string? message, int hresult) -> void
+TiFiles.TiFileFormatException.TiFileFormatException(string? message, System.Exception? innerException) -> void
+TiFiles.TiFileHeader
+TiFiles.TiFileHeader.Created.get -> System.DateTime?
+TiFiles.TiFileHeader.Created.init -> void
+TiFiles.TiFileHeader.DataType.get -> string!
+TiFiles.TiFileHeader.EndOfFileOffset.get -> byte
+TiFiles.TiFileHeader.EndOfFileOffset.set -> void
+TiFiles.TiFileHeader.ExtendedHeader.get -> ushort
+TiFiles.TiFileHeader.ExtendedHeader.init -> void
+TiFiles.TiFileHeader.FileName.get -> string!
+TiFiles.TiFileHeader.FileName.init -> void
+TiFiles.TiFileHeader.Flags.get -> TiFiles.TiFileFlags
+TiFiles.TiFileHeader.Flags.init -> void
+TiFiles.TiFileHeader.Identifier.get -> byte
+TiFiles.TiFileHeader.Identifier.init -> void
+TiFiles.TiFileHeader.IsDisplay.get -> bool
+TiFiles.TiFileHeader.IsFixed.get -> bool
+TiFiles.TiFileHeader.IsInternal.get -> bool
+TiFiles.TiFileHeader.IsModified.get -> bool
+TiFiles.TiFileHeader.IsProgram.get -> bool
+TiFiles.TiFileHeader.IsProtected.get -> bool
+TiFiles.TiFileHeader.IsVariable.get -> bool
+TiFiles.TiFileHeader.Level3RecordCount.get -> ushort
+TiFiles.TiFileHeader.Level3RecordCount.init -> void
+TiFiles.TiFileHeader.Mxt.get -> byte
+TiFiles.TiFileHeader.Mxt.init -> void
+TiFiles.TiFileHeader.Organization.get -> string!
+TiFiles.TiFileHeader.RecordLength.get -> byte
+TiFiles.TiFileHeader.RecordLength.init -> void
+TiFiles.TiFileHeader.RecordsPerSector.get -> byte
+TiFiles.TiFileHeader.RecordsPerSector.init -> void
+TiFiles.TiFileHeader.Reserved1B.get -> byte
+TiFiles.TiFileHeader.Reserved1B.init -> void
+TiFiles.TiFileHeader.TiFileHeader() -> void
+TiFiles.TiFileHeader.TotalSectors.get -> ushort
+TiFiles.TiFileHeader.TotalSectors.set -> void
+TiFiles.TiFileHeader.Updated.get -> System.DateTime?
+TiFiles.TiFileHeader.Updated.init -> void
+TiFiles.TiFileReader
+TiFiles.TiFilesSignature
+TiFiles.TiFileWriter

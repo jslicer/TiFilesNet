@@ -1,0 +1,15 @@
+﻿#nullable enable
+TiFiles.Tests.TiFileTests
+TiFiles.Tests.TiFileTests.IsTiFileAsyncReturnsFalseForInvalidSignatureAsync() -> System.Threading.Tasks.Task!
+TiFiles.Tests.TiFileTests.IsTiFileAsyncReturnsTrueAndRestoresStreamPositionAsync() -> System.Threading.Tasks.Task!
+TiFiles.Tests.TiFileTests.Level3RecordCountIsLittleEndian() -> void
+TiFiles.Tests.TiFileTests.Level3RecordCountIsLittleEndianAsync() -> System.Threading.Tasks.Task!
+TiFiles.Tests.TiFileTests.ProgramFileRoundTripsAndPadsToSector() -> void
+TiFiles.Tests.TiFileTests.ProgramFileRoundTripsAndPadsToSectorAsync() -> System.Threading.Tasks.Task!
+TiFiles.Tests.TiFileTests.ReadAsyncHonorsCancellationAsync() -> System.Threading.Tasks.Task!
+TiFiles.Tests.TiFileTests.ReaderRejectsInvalidSignature() -> void
+TiFiles.Tests.TiFileTests.ReaderRejectsInvalidSignatureAsync() -> System.Threading.Tasks.Task!
+TiFiles.Tests.TiFileTests.TiFileTests() -> void
+TiFiles.Tests.TiFileTests.UnknownHeaderBytesArePreserved() -> void
+TiFiles.Tests.TiFileTests.UnknownHeaderBytesArePreservedAsync() -> System.Threading.Tasks.Task!
+TiFiles.Tests.TiFileTests.WriteAsyncHonorsCancellationAsync() -> System.Threading.Tasks.Task!
