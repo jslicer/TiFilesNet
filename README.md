@@ -1,6 +1,6 @@
 # TiFilesNet
 
-A dependency-free .NET 8 library and console application for the TI-99/4A TIFILES transfer format.
+A dependency-free .NET 10 library and console application for the TI-99/4A TIFILES transfer format.
 
 ## Projects
 
